@@ -1,0 +1,97 @@
+Github Practice Activity:
+-ALWAYS include a descriptive message in your git commit (using -m)
+    -attributes like: date, what you did, etc.
+
+Conditionals & Loops:
+-conditions/loops: which blocks of code to execute and which to skip
+
+Conditional Statements
+-JS supports 1) if else and 2) switch for conditional statements
+-Else if should be on the same line as the ending curly bracket of the previous block
+-it is not recommended to assign variables within a conditional expressions
+-undefined is falsey
+-ternary operators run a block of code AND return a value
+-https://files.slack.com/files-pri/T043QJ45GUB-F04DHQQA66L/scope.png
+
+Comparison Operators:
+"A" > "a"
+//=> false
+
+"b" > "a"
+//=> true
+
+12 > "12"
+//=> false
+
+12 >= "12"
+//=> true
+
+-comparisons in JavaScript can be made using <, >, <= and >=
+-js converts strings to integers so if you need to do a strict equals use triple equals operator 
+    --three-quals checks for value and data type
+-when you verify equality using double-equals ==, JavaScript performs much of the "type coercion" in the background which results in an integer 1 equaling a string 1
+- 1 is true and 0 is false
+
+1 == '1'
+//=> true
+
+1 === true;
+//=> false
+
+true === true;
+//=> true
+
+"hello" === "hello"
+//=> true
+
+-best practice is to use three-quals
+-we should always use !== and ===, because they are more precise than != and ==
+-three-quals doesn't work well with empty objects because javascript parses code and doesn't see the three-quals
+-objects and arrays are reference types NOT primitive values
+-strings, numbers, booleans are value types
+
+Truthy and Falsey:
+-Example of Falseys
+        false
+        0
+        "" (empty string)
+        NaN
+        null
+        undefined
+-everything else is a Truthy
+-can use the double !! to get the original boolean value for a variable
+-just one ! gives the inverse/opposite value
+
+Boolean and Logical Operators:
+-&& = AND => BOTH values must be true
+-|| = OR => Only ONE value must be true
+
+Short-Circuit Logic
+-If you use operators on non-Boolean variables it will evaluate the first operand and if that operand is FALSEY it won't even evaluate the second
+    -"The expression basically says, "We already know the whole && expression is false, because person is falsey. Why bother dealing with the second operand?"
+-Can also use Short-Circuit Logic to assign values
+
+Switch Statements:
+-Switch statements will continue processing through the code if you don't include the break => IT IS REQUIRED
+-switch statements process faster than if/else statements because of breaks
+-fall through technique is useful when you need to return the same value for different cases
+-Example:
+            const grade = 'C';
+
+            switch (grade) {
+            case 'A':
+            case 'B':
+            case 'C':
+                console.log('You passed!')
+                break
+            case 'D':
+            case 'F':
+                console.log('You failed')
+                break
+            default:
+                console.log('Unexpected grade value entered')
+            }
+
+            => You passed!
+
+

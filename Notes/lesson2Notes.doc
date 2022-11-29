@@ -1,0 +1,100 @@
+Session 3: Data Types
+
+-Everything in JS is an Object
+-JS is a weakly typed language (hence why math isn't exact)
+-JS is also dynamically typed which means it is checked at runtime not compile time
+-Method is name for function inside of an object
+-REPL = Read, evaluate, print, loop
+-Declaring - Declaring a variable means to introduce a new variable to the program. You define its type and its name. 
+-Instantiate - Instantiating a class means to create a new instance of the class
+
+1) Strings (can do single or double quotes, but pick one or the other!)
+2) Integers
+3) Floats
+4) Booleans
+5) Arrays (stored in sequential order)
+6) Objects (collection of properties in key/value pairs)
+
+Part 1: typeof()
+
+Part 2: Numbers
+-Always double check what you are trying to do because numbers can also be strings!!
+
+Part 3: Arithmetic Operators 
+-Basic Arithmetic operators (multiply (*), divide(/), etc.)
+
+Part 4: Special Number Operators  
+-Math object has useful methods to perform complex math logic 
+-For example: Math.random(), Math.floor(), Math.ceil(), Math.round()
+-MDN has full list of available methods (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+-Math.random() can be used to randomize an array, get a random number for a game, 
+
+Part 5: Strings
+-Collection of letters/symbols (characters) wrapped in quotes
+
+Variables + Keywords
+Part 1: Use let/const to declare a variable
+    -let allows you to change the value of the variable at a later time
+    -const cannot change
+-Variables cannot have the same name
+-There are some circumstances where you wouldn't need to assign a value to a variable upon instiantiation
+-Const MUST have its value assigned upon declaration
+-Variables allow you to dynamically inject information into your code (AKA NOT HARD CODING)
+-Should default to const unless you are absolutely certain you will change the value later
+
+-Keywords = words that have specific purpose and cannot be used for variables
+
+Part 2: Assignment Operators
+-Can use =, +=, and -=
+-Can use ++ and -- to increment and decrement 
+-Very useful when using loops
+-toString allows you to convert number to a string
+
+Intro to Arrays
+-Useful for storing data, enumerating data (using index to locate element in array), quickly reordering data
+-Start counting arrays at 0
+-Each data point in an array is called an element
+-Use bracket notation to access element in array 
+-Can use strings like arrays
+-New is a datatype that creates an empty 
+
+Working with Arrays
+Part 1: const New
+-You use new to instiante an array
+-Const prevents reassignment, but it does not confer immutability 
+-An Array literal is when you don't use the New keyword and instead just assigned the value to the new array variable
+
+let array = ['item','stuff','things;] //array literal 
+
+Part 2: Length Method
+-Remember: the length of the array is one more than the highest index.
+
+Part 3: Getting Data from an Arrays
+-You need to query for data that exists (otherwise it will return undefined)
+
+Accessing Values in Arrays
+-e = [3] means e is an array with one item and its value is 3
+-f = new Array(3) means f is an array with 3 empty elements
+-push adds element to the end of an array
+
+Array Helper Methods
+-Just like most objects in JS, arrays have a ton of pre built array methods
+-Examples: include pop (removes and returns the last item), push, reverse
+-unshift adds an element to the beginning of an array
+-shift removes an element from the beginning of any array
+-Because of the way certain array methods behave, you sometimes cannot chain them
+-Methods can be chained which just means including multople methods on the same variable
+-Join is a method that joins all elements of an array into a string but it doesn't change the array, it only modifies it in place
+    -need to assign the array you are joining to a new array variable
+
+Iterating Through an Array
+-Can use a for loop to iterate over the elements of an array
+-The i in the for loop is an itaree
+-In JS, you can use forEach instead of a for loop
+-Should use semantic best practices to indicate what you are passing through (i.e., context)
+-Array.every(), Array.some(), Array.filter(), Array.map(), Array.reduce()
+
+//This is an anonymous function because the function has no name
+teams.forEach(function(el){
+console.log(el)
+});
