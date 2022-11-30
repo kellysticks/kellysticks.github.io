@@ -1,5 +1,5 @@
 //Begin loop at 100 and decrement
-for(let i = 100; i >= 0; i--){
+for(let i = 99; i >= 0; i--){
     let newNum = i;
     if(i === 0){
         console.log('No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.')
