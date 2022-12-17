@@ -1,0 +1,80 @@
+Objects and JSON
+Class Objectives:
+-Identify likely objects, attributes, and methods in real-world scenarios
+-Write a constructor for a JavaScript object
+-Write a prototype method for a JavaScript object
+-Implement and interface with JSON data
+
+Introduction:
+-Objects have properties (key value pairs), which are more robust than indexes
+-the key is a description for what the value is
+-example for a car object: make, model, and year are the keys and then honda crv 2013 are the values
+-everything in JS is an object
+
+Object Properties:
+-even if your key doesn't have a value, it still needs to be assigned a value of null
+-const myHouse = {}; creates an object without descriptors 
+-you can get and set object values using dot notation
+-if we assign a property + value to an object, where the property isn't already set, it will assign the property AND the value to the object
+-when using bracket notation (requires kebab case) to assign value or property you must use quotes for the property
+
+myCar["num-of-wheels"] = 4; AND myCar.numOfWheels = 4 IS THE SAME
+
+-key: value = property 
+-method is a function that is a property of an object
+
+Exercise:
+
+-Objects:
+    MTA {
+        currentRidership()  
+        averageRidership()
+        trains: [{trains}]
+    }
+    
+    Trains {
+        price:
+        capacity:
+        times:
+        currentRidership:  
+        averageRidership()
+        route: [{routes}]
+    }
+
+    Route {
+        start:
+        destination:
+        mileage:
+    }
+
+    Rider {
+        waitTime:
+        cost:
+        trains: [{trains}]
+        route: [{routes}]
+    }
+
+-Classes are the blueprints, objects are the instance of the class
+-You can make an individual object OR a class to make multiple objects
+-the keyword 'this' refers to the object itself and the current instance of the object
+-in Object creation, the use of function is the constructor
+-when we talk about classes, we are talking about objects but we are using a syntax that allows us to organizae our code for an intended purpose
+-classes allow you to store data and objects in an encapsulized manner that has more structure to it
+
+Below is an example of instantiating an object:
+  const Superhero = function (firstName, superheroName) {
+    // Important to understand here that the object properties firstName and superheroName
+    // are set through the this keyword with the value passed through the constructor function
+    this.firstName = firstName;
+    this.superheroName = superheroName;
+    console.log('Superhero instantiated');
+  };
+
+  const superman = new Superhero('Clark', 'Superman');
+  console.log(superman.firstNAme + ' is ' + superman.superheroName);
+
+  -prototype links a method to an object after it has been instantiated and it provides restrictions to variables
+
+  JSON
+  -stricter language than JS, so have to be more cognizant of the syntax
+  -backslash before " or ' kelly\'s house

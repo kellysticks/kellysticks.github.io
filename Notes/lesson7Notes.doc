@@ -1,0 +1,54 @@
+#Intro to DOM and jQuery:
+
+-The DOM is a big object and it creates a space for us to manipulate aspects of the webpage
+-Allows us to see the structure of our webpages on a deeper level
+-It allows us to get AND set data
+-DOM is represented by the document object and JS has a bunch of built in methods that make manipulating the DOM easier
+
+### Methods:
+document.getElementById(String id)
+-this gets the element you are looking for based on its id
+
+Document.querySelector(String selector)
+-only returns the first element with the passed selector
+
+Document.querySelectorAll(String selector)
+-selectors can be an element tag, a class, or it could be an id
+-when you pass through string to target those elements, you'll use the same syntax as you do with CSS (so class is a . and id is a #)
+
+-Using the DOM allows you to do a TON with elements, include create them
+-When you call an alert directly in the HTML, it stops the page from loading 
+-Defer makes it so the JS loads last
+
+-JS should be in its own file and you want to include it in a window.onload function!!
+-prevent default stops the page from executings its default behavior (usually refreshing)
+
+document.getElementById retrieves a single element with a matching ID.
+document.getElementsByClassName retrieves an array of elements that match the given class.
+document.getElementsByTagName retrieves an array of elements that are of the given type.
+
+jQuery and the DOM: Introduction
+-jQuery has to load its whole library before it can be used, so sometimes that slows it down/or would slow down the webpage
+-jQuery uses the same syntax as CSS
+-$ is the shortand for jQuery
+-you do not want to update styles using jquery
+--the appropriate way to do this is by adding and removing classes
+-window.Onload = document.ready for JQUERY
+-jquery will listen for several events which is why we use "on" instead of "onclick" or something more specific
+
+-An event is anything happening on a web page
+-The entire page (i.e., DOM) has to load before you can access content on it or start manipulating it
+
+DOM/jQuery Continued
+-on method adds an event listener in jQuery
+-can create a delegated event (which requires us to add element our event handler executes for) to the right side of our code
+-Delegated Event Listener
+-Target the items themselves, but can target the whole list and then pass the items through as an argument
+-in event delgation, can pass in multiple event types (separated by a space)
+
+
+Templating
+-compiling is putting data together
+-you import Handlebars into your html and then you reference it in the JS
+-templates are useful to keep your data separate from your logic
+-allows you to add elements with the same logic, style, format, etc.

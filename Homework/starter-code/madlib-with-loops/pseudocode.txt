@@ -1,0 +1,17 @@
+Create three buttons
+Create variables
+-const faveStartups (ARRAY)
+-const newStartup (STRING)
+-const numStartUps (INTEGER)
+
+Create event listener that checks for three buttons
+IF button = Create new Start Up{
+    Generate a new start up name
+}
+IF button = Favorite Start {
+    then add the current start up to an array
+}
+
+If button = print favorites list {
+    then print the array of favorited start ups
+}

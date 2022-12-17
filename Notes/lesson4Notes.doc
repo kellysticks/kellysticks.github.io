@@ -1,0 +1,77 @@
+Functions and Scope
+-resuable statements that help us from having to rewrite code multiple times
+-DRY (don't repeat yourself) is exemplified with functions
+-callback function = a function passed into another function
+-functions can be used like any object we've worked with
+-calling and invoking a function are the same thing
+-to call a function as a method you would use dot notation 
+-Methods are functions that are already a part of an object 
+-An object (and its methods/variables) are not available until the object is instantiated 
+-when you open up a web page, that window is looking at a document
+-the Document object has a method called getElementById, which targets the element with the id given
+-can target DOM elements by element, class, id, querySelector and querySelectorAll
+
+
+Two Types of functions:
+1) Function Declarations 
+-Can be used anywhere in the scope where they are defined
+-Can call it before the part of code where it is actually defined
+-A function declaration always has the following:
+    -A name
+    -An optional list of parameters (i.e., the names of arguments to be "passed" into the function, or information the function will use); this is defined by the parenthesis before the opening curly brace
+    -Statements inside the function (the code executed every time the function is called)
+
+2) Function Expressions
+-You can only access these functions after the expression has been initialized
+
+Dice Roller Lab:
+PsuedoCode
+
+Parameters:
+-Passing parameters into functions makes them more robust
+-Parameters refer to variables defined in the function's declaration; arguments refer to the actual values passed into the function when the function is called. For example:
+-Because JS is loosely typed, you have to be really careful with how you write your functions because any data type can be passed in as an argument,
+so its important to write code to catch those potential errors
+
+// Parameter
+function doSomething (parameter) {
+  // does something
+}
+
+// Argument
+doSomething(argument)
+
+The Return Statement:
+-'return' ends the function and returns a value/calls another function, 
+-this can then be stored in a variable OR used as the argument for another function
+
+const num = sum(3, 4)
+=> 7
+const numDbl = double(num);
+=> 14
+
+// This can also be written:
+const num = double(sum(3,4));
+=> 14
+
+Scope 
+-"You can see out but you cannot see in"
+-you don't want to use global scope for all of your variables, which pollutes the global namespace and makes it difficult to track what you are calling when and contain your logic
+-it is better to keep variables contained to the logic they are used in
+-control where the logic in your programs have certain data
+
+
+OOP JavaScript
+-you use bracket notation to define objects 
+-you use dot notation to access a property on an object
+-properties are the key value pairs within the object
+
+Class Syntax
+-class syntax allows us to write one outline of what we want and we can repeat it multiple times
+-must use the 'class' keyword when creating a class AND capitalize the first letter in the class name
+ex: class Car {}
+-constructor methods initalize all of the property values of your object
+-Classes do not have commas in them, object notation does
+-extends is a keyword you use for inheritance
+-super takes the details of the parent class and passes it into the child class
+-instantiating is creating the object variable of the class
